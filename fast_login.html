@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast-Food-Fast</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript">
+      function loginforgot(){
+        document.getElementById("hdfastfoodlogin").style.display = "none";
+        document.getElementById("logindetails").style.display = "none";
+        document.getElementById("loginrst").style.display = "block";
+        document.getElementById("loginrequest").style.display = "none";
+      }
+      function loginrequest(){
+        document.getElementById("hdfastfoodlogin").style.display = "none";
+        document.getElementById("logindetails").style.display = "none";
+        document.getElementById("loginrst").style.display = "none";
+        document.getElementById("loginrequest").style.display = "block";
+      }
+      function loginsubmit(){
+        window.open("fast_mainmenu.html","_self");
+        //window.open("fast_mainmenu.html");
+        window.location.href="fast_mainmenu.html";
+        //header("Location: fast_mainmenu.html");
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="frmmessage">
+      <span id="msgerror" style="display:none; color:#FF0000">RED ALERT</span>
+			<span id="msgsuccess" style="display:none; color:#00FF00">GREEN ALERT</span>
+    </div>
+    <form id="login">
+      <section id="loginheading">
+        <div class="generaldiv" id="hdfastfoodlogin">
+          <h1>Fast-Food-Fast Login</h1>
+        </div>
+      </section>
+      <div class="logindiv" id="logindetails" align="center">
+        <section id="sectloginusername">
+          <div class="generaldiv">
+            <input class="inp-text" type="text" name="loginusername" id="loginusername" placeholder="Enter your user name" value="" maxlength="30">
+          </div>
+        </section>
+        <section id="sectloginpassword">
+          <div class="generaldiv">
+            <input class="inp-text" type="password" name="loginuserpassword" id="loginuserpassword" placeholder="Enter your password" value="" maxlength="30">
+          </div>
+        </section>
+        <section id="sectloginsubmit">
+            <div class="generaldiv">
+              <!--<button class="btnsubmit" type="submit" name="loginsubmit" id="loginsubmit">Next</button>-->
+              <input class="btnsubmit" type="reset" name="btnloginsubmit" id="btnloginsubmit" onclick ="loginsubmit()" value="Next">
+            </div>
+        </section>
+        <section id="sectloginforgot">
+            <div class="generaldiv">
+              <label class="lbllink" id="forgotpassword" onclick="loginforgot();">Forgot password?</label>
+            </div>
+        </section>
+        <section id="sectloginrequest">
+            <div class="generaldiv">
+              <label class="lbllink" id="requestlogin" onclick="loginrequest();">Request login</label>
+            </div>
+        </section>
+      </div>
+    </form>
+    <form id="request">
+      <div class="generaldiv" id="loginrequest" style="display: none;">
+        <section id="reqheading">
+          <div class="generaldiv">
+            <h1>Fast-Food-Fast Login Request</h1>
+          </div>
+        </section>
+        <section id="sectrequsername">
+          <div class="generaldiv">
+            <label for="requsername">Preferred login name</label>
+            <input class="inp-text" type="text" name="requsername" id="requsername" value="" maxlength="30">
+            <label class="lbllink" id="requsernameavailable">Check availability</label>
+          </div>
+        </section>
+        <section id="sectreqfullusername">
+          <div class="generaldiv">
+            <label for="reqfullusername">Full user name</label>
+            <input class="inp-semilarge" type="text" name="reqfullusername" id="reqfullusername" value="" maxlength="60">
+          </div>
+        </section>
+        <section id="sectreqemail">
+          <div class="generaldiv">
+            <label for="reqemail">Email</label>
+            <input class="inp-semilarge" type="text" name="reqemail" id="reqemail" value="" maxlength="60">
+          </div>
+        </section>
+        <section id="sectrequsergroup">
+          <div class="generaldiv">
+            <label for="requsergroup">Group</label>
+            <input class="inp-textreadonly" type="text" name="requsergroupcode" id="requsergroupcode" value="" readonly maxlength="30">
+            <input class="inp-semilargereadonly" type="text" name="requsergroupname" id="requsergroupname" value="" readonly maxlength="60">
+          </div>
+        </section>
+        <section id="sectreqpassword">
+          <div class="generaldiv">
+            <div class="generaldiv">
+              <label class="lbltext">Password reset {case sensitive};</label>
+            </div>
+            <div class="generaldiv">
+              <label for="requserpassword">Initial</label>
+              <input class="inp-text" type="password" name="requserpasswordinitial" id="requserpasswordinitial" value="" maxlength="30">
+              <label for="requserpassword">Confirmation</label>
+              <input class="inp-text" type="password" name="requserpasswordconfirm" id="requserpasswordconfirm" value="" maxlength="30">
+            </div>
+          </div>
+        </section>
+        <section id="sectreqsecretquestion">
+          <div class="generaldiv">
+            <label class="lbltext" for="reqsecretquestion">Secret question</label>
+            <label class="verticalradio"><input type="radio" name="reqsecretquestion" id="reqsecretquestion" value="Favourite colour">Favourite colour</label>
+            <label class="verticalradio"><input type="radio" name="reqsecretquestion" id="reqsecretquestion"
+              value="Mum's maiden name">Mum's maiden name</label>
+
+            <label class="verticalradio"><input type="radio" name="reqsecretquestion" id="reqsecretquestion"
+              value="Name of favourite school teacher">Name of favourite school teacher</label>
+
+            <label class="verticalradio"><input type="radio" name="reqsecretquestion" id="reqsecretquestion"
+              value="Name of city were you born in">Name of city were you born in</label>
+
+          </div>
+          <div class="generaldiv">
+            <label for="reqsecretanswer">Answer</label>
+            <input class="inp-text" type="text" name="reqsecretanswer" id="reqsecretanswer" value="" maxlength="30">
+          </div>
+        </section>
+        <section id="sectreqsubmit">
+            <div class="generaldiv">
+              <button class="btnsubmit" type="submit" name="reqsubmit" id="reqsubmit">Next</button>
+              <button class="btnreset" type="reset" name="reqreset" id="reqreset">Reset</button>
+            </div>
+        </section>
+      </div>
+    </form>
+    <form id="passwordreset">
+      <div class="generaldiv" id="loginrst"  style="display: none;">
+        <section id="sectrstheading">
+          <div class="generaldiv">
+            <h1>Fast-Food-Fast Password Reset</h1>
+          </div>
+        </section>
+        <section id="sectrstusername">
+          <div class="generaldiv">
+            <label for="rstusername">Login name</label>
+            <input class="inp-text" type="text" name="rstusername" id="rstusername" value="" maxlength="30">
+          </div>
+        </section>
+        <section id="sectrstfullusername">
+          <div class="generaldiv">
+            <label for="rstfullusername">Full user name</label>
+            <input class="inp-semilargereadonly" type="text" name="rstfullusername" id="rstfullusername" value="" readonly>
+          </div>
+        </section>
+        <section id="sectrstusergroup">
+          <div class="generaldiv">
+            <label for="rstusergroup">Group</label>
+            <input class="inp-textreadonly" type="text" name="rstusergroupcode" id="rstusergroupcode" value="" readonly>
+            <input class="inp-semilargereadonly" type="text" name="rstusergroupname" id="rstusergroupname" value="" readonly>
+          </div>
+        </section>
+        <section id="sectrstsecretquestion">
+          <div class="generaldiv">
+            <label for="rstsecretanswer"  id="rstsecretquestion">Name of favourite school teacher</label>
+            <input class="inp-text" type="text" name="rstsecretanswer" id="rstfullusername" value="" maxlength="30">
+          </div>
+        </section>
+        <section id="sectrstpassword">
+          <div class="generaldiv">
+            <div class="generaldiv">
+              <label class="lbltext">Password;</label>
+            </div>
+
+            <div class="generaldiv">
+              <label for="rstuserpassword">Initial</label>
+              <input class="inp-text" type="password" name="rstuserpasswordinitial" id="rstuserpasswordinitial" value="">
+              <label for="rstuserpassword">Confirmation</label>
+              <input class="inp-text" type="password" name="rstuserpasswordconfirm" id="rstuserpasswordconfirm" value="">
+            </div>
+          </div>
+        </section>
+        <section id="sectreqsubmit">
+            <div class="generaldiv">
+              <button class="btnsubmit" name="rstsubmit" id="rstsubmit">Next</button>
+              <button class="btnreset" type="reset" name="rstreset" id="rstreset">Reset</button>
+            </div>
+        </section>
+      </div>
+    </form>
+  </body>
+</html>

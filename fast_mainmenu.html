@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="fast food delivery">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Fast-Food-Fast System Menu</title>
+    <script type="text/javascript">
+      function mnuclick(mnuoption){
+        switch(mnuoption){
+          case "fast_logout.html":
+            window.open(mnuoption,"_self");
+            break;
+          default:
+            document.getElementById("sectioncontent").src = mnuoption;
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="generaldiv">
+      <div id="mainh1">
+        <h1>Fast-Food-Fast Main Screen</h1>
+      </div>
+      <div class="topcorner" id="topright">
+        <h1>Logged in user: Administrator Since: 4th Sep, 2018 17:49<h1>
+      </div>
+      <div class="generaldiv">
+        <section class="container">
+          <div class="mainleft">
+            <h2>System Menu</h2> 
+            <nav>
+              <ul>
+                <li onclick="mnuclick('fast_foodcategory.html');">Food category</li>
+                <li onclick="mnuclick('fast_fooditem.html');">Food item</li>
+                <li onclick="mnuclick('fast_foodorder.html');">Order food</li>
+                <li onclick="mnuclick('fast_processorder.html');">Process order(s)</li>
+                <li onclick="mnuclick('fast_orderhistory.html');">View order history</li>
+                <li onclick="mnuclick('fast_user.html');">Assign rights</li>
+                <li onclick="mnuclick('fast_password.html');">Change password</li>
+                <li onclick="mnuclick('fast_logout.html');">Log out</li>
+              </ul>
+            </nav>
+            <div style="height: 5%; width: 15%; position:absolute; bottom:15px;">
+              <h2>&copy; Ver. 1.0</h2>
+            </div>
+          </div>
+          <div class="mainright">
+            <iframe id="sectioncontent">
+            </iframe>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

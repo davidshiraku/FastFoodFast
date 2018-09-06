@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast-Food-Fast</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript">
+      function disableform(){
+        var form = document.getElementById("frminput");
+        var elements = form.elements;
+        for (var mrun = 0, len = elements.length; mrun < len; ++mrun) {
+          elements[mrun].readOnly = true;
+        }
+
+        var _container = document.getElementById("frminput");
+        var _chks = _container.getElementsByTagName("INPUT");
+        var _numChks = _chks.length - 1;
+
+        for(var mrun = 0; mrun <= _numChks; mrun++){
+          _type = _chks[mrun].getAttribute("type");
+
+          if(_type=="checkbox")
+            _chks[mrun].disabled=true;
+        }
+      }
+    </script>
+  </head>
+  <body onload="disableform()">
+    <div id="frmmessage">
+      <span id="msgerror" style="display:none; color:#FF0000">RED ALERT</span>
+			<span id="msgsuccess" style="display:none; color:#00FF00">GREEN ALERT</span>
+    </div>
+    <section id="reqheading">
+      <div class="generaldiv">
+        <h1>Food Item</h1>
+      </div>
+    </section>
+    <form id="frminput">
+      <table class="tableformat" cellspacing="0px;" border=0 class="form">
+        <tr>
+          <td class="borderstyle">
+            <img src="images/masterbutton/add.bmp" alt="Add" id="mst_buttonadd" title="Add" width="25" height="20" onclick="mst_buttonact('mst_buttonadd');" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td>
+            <img src="images/masterbutton/lineseperator1.png" width="1" height="20" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td class="borderstyle">
+            <img src="images/masterbutton/edit.ico" alt="Edit" id="mst_buttonedit" title="Edit" width="25" height="20" onclick="mst_buttonact('mst_buttonedit');" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td>
+            <img src="images/masterbutton/lineseperator1.png" width="1" height="20" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td class="borderstyle">
+            <img src="images/masterbutton/binocular.ico" alt="Search" id="mst_buttonsearch" title="Search" width="25" height="20" onclick="mst_buttonact('mst_buttonsearch');" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td>
+            <img src="images/masterbutton/lineseperator1.png" width="1" height="20" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td class="borderstyle">
+            <img src="images/masterbutton/delete.ico" alt="Delete" id="mst_buttondelete" title="Delete" width="25" height="20" onclick="mst_buttonact('mst_buttondelete');" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td>
+            <img src="images/masterbutton/lineseperator1.png" width="1" height="20" />
+          </td>
+          <td><div style="width: 5px; ">&nbsp;</div>
+          <td class="borderstyle">
+            <img src="images/masterbutton/listimage.png" alt="List" id="mst_buttonlist" title="List" width="25" height="20" onclick="mst_buttonact('mst_buttonlist');" />
+          </td>
+        </tr>
+      </table>
+      <section id="sectfoodname">
+        <div class="generaldiv">
+          <label for="foodname">Name *<img src="images/locate.png" alt="Search" id="serfoodname" title="Search" width="15" height="15" /></label>
+          <input class="inp-semilarge" type="text" name="foodname" id="foodname" value="" maxlength="60">
+        </div>
+      </section>
+      <section id="sectfoodcode">
+        <div class="generaldiv">
+          <label for="foodcode">Code *</label>
+          <input class="inp-textreadonly" type="text" name="foodcode" id="foodcode" value="" readonly maxlength="15">
+        </div>
+      </section>
+      <section id="sectsuspend">
+        <div class="generaldiv">
+          <label for="suspend">Suspend</label>
+          <input class="inp-small" type="checkbox" name="suspend" id="suspend">
+          <input type="hidden" name="tmpsuspend" id="tmpsuspend">
+
+          <label for="reason" id="lblreason">Reason</label>
+          <input class="inp-semilargereadonly" type="text" name="reason" id="reason" value="" readonly maxlength="60">
+        </div>
+      </section>
+      <section id="sectcatname">
+        <div class="generaldiv">
+          <label for="catname">Category name *<img src="images/locate.png" alt="Search" id="sercatname" title="Search" width="15" height="15" /></label>
+          <input class="inp-semilarge" type="text" name="catname" id="catname" value="" maxlength="60">
+
+          <label for="catcode">Code *</label>
+          <input class="inp-textreadonly" type="text" name="catcode" id="catcode" value="" readonly maxlength="15">
+        </div>
+      </section>
+      <section id="sectinpsubmit">
+          <div class="generaldiv" style="display: none;">
+            <button class="btnsubmit" type="submit" name="inpsubmit" id="inpsubmit">Update</button>
+            <button class="btnreset" type="reset" name="inpreset" id="inpreset">Reset</button>
+          </div>
+      </section>
+    </form>
+  </body>
+</html>

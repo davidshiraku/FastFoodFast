@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast-Food-Fast</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div id="frmmessage">
+      <span id="msgerror" style="display:none; color:#FF0000">RED ALERT</span>
+			<span id="msgsuccess" style="display:none; color:#00FF00">GREEN ALERT</span>
+    </div>
+    <section id="reqheading">
+      <div class="generaldiv">
+        <h1>Order Food</h1>
+      </div>
+    </section>
+    <form id="frminput">
+      <section id="sectclientname">
+        <div class="generaldiv">
+          <label for="clientname">Full user name *</label>
+          <input class="inp-semilargereadonly" type="text" name="clientname" id="clientname" value="" readonly maxlength="60">
+        </div>
+      </section>
+      <section id="sectcatname">
+        <div class="generaldiv">
+          <label for="catname">Category <img src="images/locate.png" alt="Search" id="sercatname" title="Search" width="15" height="15" /></label>
+          <input class="inp-semilarge" type="text" name="catname" id="catname" value="" maxlength="60">
+        </div>
+      </section>
+      <section id="sectorderdate">
+        <div class="generaldiv">
+          <label for="orderdate">Date *</label>
+          <input class="inp-mediumreadonly" type="text" name="orderdate" id="orderdate" value="" readonly maxlength="10">
+          
+          <label for="ordertime">Time *</label>
+          <input class="inp-smallreadonly" type="text" name="ordertime" id="ordertime" value="" readonly maxlength="5">
+        </div>
+      </section>
+      <section id="sectorderno">
+        <div class="generaldiv">
+          <label for="orderno">Order number *</label>
+          <input class="inp-textreadonly" type="text" name="orderno" id="orderno" value="" readonly maxlength="16">
+        </div>
+      </section>
+      <section id="sectselection">
+        <div class="generaldiv">
+          <table id="tblmenu" class="sidehovertable">
+            <caption>Menu</caption>
+            <tr>
+              <th>S/No.</th><th>Menu item</th><th>Category</th><th>Price</th><th>Select</th>
+            </tr>
+          </table>
+          <table id="tblselected" class="sidehovertable">
+            <caption>Selected</caption>
+            <tr>
+              <th>S/No.</th><th>Chosen</th><th>Category</th><th>Price</th><th>Qty</th><th>Line charge</th>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section id="secttotalcharge">
+        <div class="generaldiv">
+          <label for="totalcharge">Total charge</label>
+          <input class="inp-textreadonly" type="text" name="totalcharge" id="totalcharge" value="" readonly>
+        </div>
+      </section>
+      <section id="sectpayby">
+        <div class="generaldiv">
+          <label class="lbltext" for="payby">Pay by</label>
+          <label class="verticalradio"><input type="radio" name="payby" id="payby" value="Cash">Cash</label>
+          <label class="verticalradio"><input type="radio" name="payby" id="payby" value="Credit card">Credit card</label>
+          <label class="verticalradio"><input type="radio" name="payby" id="payby" value="MPesa">MPesa</label>
+          <label class="verticalradio"><input type="radio" name="payby" id="payby" value="Airtel money">Airtel money</label>
+          <label class="verticalradio"><input type="radio" name="payby" id="payby" value="Cheque">Cheque</label>
+          <label class="verticalradio"><input type="radio" name="payby" id="payby" value="On account">On account</label>
+        </div>
+      </section>
+      <section id="sectinpsubmit">
+          <div class="generaldiv">
+            <button class="btnsubmit" type="submit" name="inpsubmit" id="inpsubmit">Update</button>
+            <button class="btnreset" type="reset" name="inpreset" id="inpreset">Reset</button>
+          </div>
+      </section>
+    </form>
+  </body>
+</html>

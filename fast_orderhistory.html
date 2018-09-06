@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast-Food-Fast</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div id="frmmessage">
+      <span id="msgerror" style="display:none; color:#FF0000">RED ALERT</span>
+			<span id="msgsuccess" style="display:none; color:#00FF00">GREEN ALERT</span>
+    </div>
+    <section id="reqheading">
+      <div class="generaldiv">
+        <h1>View order history</h1>
+      </div>
+    </section>
+    <form id="frminput">
+      <section id="sectclientname">
+        <div class="generaldiv">
+          <label for="clientname">Full user name *</label>
+          <input class="inp-semilargereadonly" type="text" name="clientname" id="clientname" value="" readonly maxlength="60">
+        </div>
+      </section>
+      <section id="sectorderdate">
+        <div class="generaldiv">
+          <label for="fromdate">From date</label>
+          <input class="inp-medium" type="text" name="fromdate" id="fromdate" value="" maxlength="10">
+          
+          <label for="todate">To date</label>
+          <input class="inp-medium" type="text" name="todate" id="todate" value="" maxlength="10">
+        </div>
+      </section>
+      <section id="sectinpsubmit">
+          <div class="generaldiv">
+            <label for="inpsubmit">&nbsp;</label>
+            <button class="btnsubmit" type="submit" name="inpsubmit" id="inpsubmit">Go</button>
+          </div>
+      </section>
+      <section id="sectselection">
+        <div class="generaldiv">
+          <table id="tblselected" class="hovertable">
+            <caption>History</caption>
+            <tr>
+              <th>S/No.</th><th>Order no.</th><th>Paid by</th><th>Chosen</th><th>Category</th><th>Price</th><th>Qty</th><th>Line charge</th><th>Status</th><th>Complete</th>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section id="secttotalcharge">
+        <div class="generaldiv">
+          <label for="totalcharge">Total charges</label>
+          <input class="inp-textreadonly" type="text" name="totalcharge" id="totalcharge" value="" readonly>
+        </div>
+      </section>
+    </form>
+  </body>
+</html>
