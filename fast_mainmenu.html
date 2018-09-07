@@ -19,13 +19,22 @@
       }
     </script>
   </head>
-  <body>
+  <body onload="mnuclick('fast_welcome.html');">
     <div class="generaldiv">
       <div id="mainh1">
         <h1>Fast-Food-Fast Main Screen</h1>
       </div>
+      <!--<div class="topcorner" id="topright">-->
       <div class="topcorner" id="topright">
-        <h1>Logged in user: Administrator Since: 4th Sep, 2018 17:49<h1>
+        <h3>
+          Logged in user: Administrator Since: 4th Sep, 2018 17:49
+          <select name="shortcut" id="shortcuts" onchange="mnuclick(this.value); this.selectedindex = -1">
+            <option value=""></option>
+            <option value="fast_welcome.html">Home page</option>
+            <option value="fast_password.html">Change password</option>
+            <option value="fast_logout.html">Log out</option>
+          </select>
+        <h3>
       </div>
       <div class="generaldiv">
         <section class="container">
@@ -39,12 +48,10 @@
                 <li onclick="mnuclick('fast_processorder.html');">Process order(s)</li>
                 <li onclick="mnuclick('fast_orderhistory.html');">View order history</li>
                 <li onclick="mnuclick('fast_user.html');">Assign rights</li>
-                <li onclick="mnuclick('fast_password.html');">Change password</li>
-                <li onclick="mnuclick('fast_logout.html');">Log out</li>
               </ul>
             </nav>
-            <div style="height: 5%; width: 15%; position:absolute; bottom:15px;">
-              <h2>&copy; Ver. 1.0</h2>
+            <div class="maintext">
+              <span>&copy; Version 1.0</span>
             </div>
           </div>
           <div class="mainright">
