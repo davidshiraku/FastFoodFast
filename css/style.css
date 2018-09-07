@@ -17,11 +17,22 @@ h1 {
 h2 {
   font-weight:50;
   color: #000000;
-  background-color: #CDFFFF;
+  background-color: #c9eaf9;
   line-height: 20px;
   font-size:10pt;
   margin-top:0px;
   padding: 5px;
+}
+
+/* Header 3 settings - mainly displays content on the top right of browser */
+h3 {
+  font-weight:50;
+  color: #000000;
+  background-color: #c9eaf9;
+  font-size:10pt;
+  text-align: right;
+  float: right;
+  display: inline;
 }
 
 /* Right align all text and position all inputs on the same column*/
@@ -54,6 +65,26 @@ label {
   width: 100%;
   margin:auto;
   text-align: center;
+}
+
+/* Div for welcome screen */
+.coloureddiv {
+  width: 95%;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  /*background-image: linear-gradient(to right, red , yellow);*/
+  background-image: linear-gradient(#c9eaf9 , #636369);
+}
+
+label.lblshadow {
+    width: 80%;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
 }
 
 /* Link text settings */
@@ -179,19 +210,33 @@ li{
 /* Main menu section */
 .container {
   width: 100%;
-  height: 560px;
+  height: 550px;
   padding: 0px;
 }
 .mainleft {
   width: 15%;
-  height: 560px;
+  height: 550px;
   float: left;
   overflow: auto;
   border-style: solid;
 }
+.maintext {
+  font-family: verdana,arial,sans-serif;
+  width: 98.2%;
+  height: 1.5%;
+  font-size:11px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  border: solid 1px #c9eaf9;
+  background-color: #c9eaf9;
+  padding-top: 10px;
+  margin-bottom: 1px;
+}
 .mainright {
   margin-left: 15%;
-  height: 570px;
+  height: 552px;
 }
 /* End of main menu section */
 
@@ -199,12 +244,12 @@ li{
 iframe
 {
   width: 99%;
-  height:560px;
-  border-color: #CDFFFF;
+  height:552px;
+  border-color: #c9eaf9;
 }
 
 /* Display text at the top right corner of web page */
-.topcorner{
+.topcorner {
   position: absolute;
   top: 0;
   right: 0;
@@ -278,4 +323,3 @@ table.sidehovertable td {
   border-style: solid;
   border-color: #a9c6c9;
 }
-
