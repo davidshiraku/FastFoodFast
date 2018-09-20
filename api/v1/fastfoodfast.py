@@ -172,10 +172,13 @@ def create_task():
     task = {
         'id': foodcategory[-1]['id'] + 1,
         'title': request.json['title'],
-        'description': request.json.get('description', "")
+        'description': request.json.get('description', ""),
+        'suspend': False,
+        'reason': u'',
     }
     foodcategory.append(task)
-    return jsonify({'task': task}), 201
+    #return jsonify({'task': task}), 201
+    return jsonify(task), 201
 
 # Update food category
 @app.route('/fastfoodfast/api/v1/foodcategory/<int:task_id>', methods=['PUT'], endpoint='update_task')
@@ -243,10 +246,13 @@ def create_taskfooditem():
         'title': request.json['title'],
         'description': request.json.get('description', ""),
         'category': request.json.get('category', ""),
-        'price': request.json.get('price', "")
+        'price': request.json.get('price', ""),
+        'suspend': False,
+        'reason': u'',
     }
     fooditem.append(task)
-    return jsonify({'task': task}), 201
+    #return jsonify({'task': task}), 201
+    return jsonify(task), 201
 
 # Update food item
 @app.route('/fastfoodfast/api/v1/fooditem/<int:task_id>', methods=['PUT'], endpoint='update_taskfooditem')
@@ -318,7 +324,8 @@ def create_taskfoodorder():
         'food':request.json['food']
     }
     foodorder.append(task)
-    return jsonify({'task': task}), 201
+    #return jsonify({'task': task}), 201
+    return jsonify(task), 201
 
 # Update food order status
 @app.route('/fastfoodfast/api/v1/orders/<int:task_id>', methods=['PUT'], endpoint='update_taskfoodorder')
@@ -426,7 +433,8 @@ def create_user():
         'accessright': request.json.get('accessright', "")
     }
     user.append(task)
-    return jsonify({'task': task}), 201
+    #return jsonify({'task': task}), 201
+    return jsonify(task), 201
 
 # Update User
 @app.route('/fastfoodfast/api/v1/user/<int:task_id>', methods=['PUT'], endpoint='update_user')
