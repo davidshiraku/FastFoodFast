@@ -1,0 +1,4 @@
+[
+  "tests/test_fastfoodfast.py::test_FoodFategoryRespone", 
+  "tests/test_fastfoodfast.py::test_FoodFategoryPost"
+]
