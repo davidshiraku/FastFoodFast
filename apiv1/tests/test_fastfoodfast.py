@@ -6,6 +6,10 @@ import pytest
 #sys.path.append('..')
 # End of unnecessary code while running tests while inside tests sub-folder
 
+import sys, os
+myPath = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, myPath + '/../')
+
 from fastfoodfast import app
 
 @pytest.fixture
